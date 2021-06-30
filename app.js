@@ -33,7 +33,7 @@ let displayInfo = (pokeData) => {
 
   //Image
   let pokePic = pokeData.sprites.other.dream_world.front_default;
-  // let officialArtPic = pokeData.sprites.other["official-artwork"].front_default
+  let officialArtPic = pokeData.sprites.other["official-artwork"].front_default
 
   if (pokePic) {
     document.querySelector("img").setAttribute("src", pokePic);
@@ -42,7 +42,7 @@ let displayInfo = (pokeData) => {
       .querySelector("img")
       .setAttribute(
         "src",
-        "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        officialArtPic
       );
   }
 
