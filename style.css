@@ -30,22 +30,37 @@ nav {
 
 nav p {
     font-size: 2.4rem;
-    flex-grow: 1;
+    flex-grow: 1; 
 
 
 }
 
+form {
+    text-align: right;
+    width: 30%;
+    min-width: 142.550px;
+}
 input {
     text-align: center;
-    width: 30%;
-    border: none;
+    height: 100%;
+    border: none;  
+    min-width: 114px;
+    width: 80%;
 }
 
 button {
+    text-align: center;
     background-color: lightgray;
     padding: .5em 1em;
     border: none;
+    transition: background-color 0.2s;
+    width: 20%;
     
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #e2e1e1;
 }
 
 main {

@@ -1,6 +1,7 @@
 let url = `https://pokeapi.co/api/v2/pokemon`;
 
-document.querySelector("button").addEventListener("click", (e) => {
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
   let pokemon = document.querySelector("input").value;
   fetch(`${url}/${pokemon.toLowerCase()}`)
     .then((response) => response.json())
