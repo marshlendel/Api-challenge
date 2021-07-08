@@ -14,6 +14,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
         .then((response) => response.json())
         .then((speciesData) => displaySpecies(speciesData));
     });
+    document.querySelector("input").value = "";
 });
 
 let displayInfo = (pokeData) => {
