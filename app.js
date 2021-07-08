@@ -1,5 +1,20 @@
 let url = `https://pokeapi.co/api/v2/pokemon`;
 
+document.querySelector("#random-button").addEventListener("click", () => {
+
+    fetch(`${url}/${randomPokemonNumber()}`)
+    .then((response) => response.json())
+    .then((json) => {
+      typeColor(json);
+      return displayInfo(json);
+    })
+    .then((speciesInfo) => {
+      fetch(speciesInfo)
+        .then((response) => response.json())
+        .then((speciesData) => displaySpecies(speciesData));
+    });
+})
+
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   let pokemon = document.querySelector("input").value;
@@ -131,3 +146,8 @@ let typeColor = (colorData) => {
     textColor.style.color = "#9B6470";
   }
 };
+
+let randomPokemonNumber = () => {
+  let randomNumber = Math.floor(Math.random() * 898) + 1
+  return randomNumber
+}

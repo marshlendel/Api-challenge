@@ -29,18 +29,19 @@ nav {
     color: white;
     padding: 1.5em 2rem;
     width: 100%;
+    justify-content: space-between
 }
+
+
 
 nav p {
     font-size: 2.4rem;
     flex-grow: 1; 
-
-
 }
 
 form {
     text-align: right;
-    width: 30%;
+    width: 25%;
     min-width: 142.550px;
 }
 input {
@@ -48,7 +49,7 @@ input {
     height: 100%;
     border: none;  
     min-width: 114px;
-    width: 80%;
+    width: 70%;
 }
 
 button {
@@ -58,7 +59,14 @@ button {
     border: none;
     transition: background-color 0.2s;
     width: 20%;
+    height: 100%;
     
+}
+
+#random-button {
+    width: 15%;
+    min-width: 137px;
+    white-space: nowrap;
 }
 
 button:hover {
